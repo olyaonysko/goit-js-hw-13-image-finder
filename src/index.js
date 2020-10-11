@@ -31,7 +31,7 @@ function fetchImages() {
     updateMarkup(images);
     loadMoreButton.show();
     loadMoreButton.enable();
-  });
+  }).catch(error => console.error(error));
 }
 
 function clearContainer() {
