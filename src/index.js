@@ -21,7 +21,7 @@ function searchFormSubmitHandler(event) {
   event.preventDefault();
   const form = event.currentTarget;
   imagesService.query = form.elements.query.value;
-  if (!imagesService.query | imagesService.query === " ") {
+  if (!imagesService.query || !imagesService.query.trim()) {
      error({
         text: 'The field is empty.',
      });
